@@ -1,5 +1,6 @@
-SECRET_KEY = "sk-12345-hardcoded-demo" # <-- bandit will flag this
+import os
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 def load_fake_dataset():
     return {"rows": 1000, "features": 12}
