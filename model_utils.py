@@ -1,4 +1,4 @@
-API_KEY = "sk-12345-hardcoded-demo"  # <-- bandit will flag this
+SECRET_KEY = "sk-12345-hardcoded-demo" # <-- bandit will flag this
 
 
 def load_fake_dataset():
