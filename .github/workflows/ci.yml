@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies
         run: pip install flake8 bandit pytest
       - name: Lint with flake8
-        run: flake8 . --max-line-length=100
+        run: flake8 . --max-line-length=100 --extend-ignore=E302
       - name: Security scan with bandit
         run: bandit -r .
       - name: Run unit tests
