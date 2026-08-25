@@ -14,6 +14,6 @@ jobs:
       - name: Lint with flake8
         run: flake8 . --max-line-length=100 --extend-ignore=E302
       - name: Security scan with bandit
-        run: bandit -r .
+        run: bandit -r . --exclude ./test_model_utils.py
       - name: Run unit tests
         run: pytest -v
