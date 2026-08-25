@@ -1,4 +1,6 @@
-API_KEY = "sk-12345-hardcoded-demo"  # <-- bandit will flag this
+import os
+
+API_KEY = os.environ.get("API_KEY")  # no longer hardcoded
 
 def load_fake_dataset():
     return {"rows": 1000, "features": 12}
